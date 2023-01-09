@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>表格标签</h3>
+    <p>table 表格</p>
+    <p>tr 行</p>
+    <p>td 单元格</p>
+    <p>th 表头 居中 加粗</p>
+    <p>table的属性（一般不用 都用css）：align(表格在页面居中 不是文字) border(边框大小) cellpadding(内容和边的空隙) cellspacing(单元格之间的空隙) width(表格宽度) </p>
+    <h3>表格结构标签（让结构更清晰）</h3>
+    <p>thead 表格的头部区域（和th不是一个东西 th是一个格 thead是一行）</p>
+    <p>tbody 表格的主体区域</p>
+    <h3>合并单元格 都是在td里写</h3>
+    <p>rowspan="合并数量" 跨行合并 把最上侧的单元格为目标单元格 写合并代码</p>
+    <p>colspan="合并数量" 跨列合并 把最左侧的单元格为目标单元格 写合并代码</p>
+    <p>合并完要删除多余单元格</p>
+
+    <table border="1" align="center" cellspacing="0" cellpadding="30" width="500">
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>sa</td>
+            <td>40</td>
+            <td>女</td>
+        </tr>
+        <tr>
+            <td>gil</td>
+            <td>41</td>
+            <td>女</td>
+        </tr>
+        <tr>
+            <td>twins</td>
+            <td>21</td>
+            <td>女</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>

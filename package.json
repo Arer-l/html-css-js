@@ -1,0 +1,19 @@
+{
+  "name": "html-css-js",
+  "version": "1.0.0",
+  "description": "html css js demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arer-l/html-css-js.git"
+  },
+  "author": "Arer-l",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arer-l/html-css-js/issues"
+  },
+  "homepage": "https://github.com/Arer-l/html-css-js#readme"
+}
