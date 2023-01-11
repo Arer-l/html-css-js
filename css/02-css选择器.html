@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 标签选择器 */
+        p {
+            color: rgb(36, 88, 71);
+        }
+        /* 类选择器 */
+        .blue {
+            color: blue;
+        }
+        .red {
+            background-color: tomato;
+        }
+        .green {
+            
+            background-color: aquamarine;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        
+        /* 多类名：一个标签可以有多类名 在同一个引号内 类名间用空格隔开 
+        可以抽出公共部分 精简代码 修改方便*/
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .font {
+            font-size: 25px;
+        }
+
+        /* id选择器 */
+        /* 和类选择器最大的区别在于使用次数 */
+        #pink {
+            background-color: pink;
+        }
+
+        /* 通配符选择器 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>标签选择器：以html标签名作为选择器</h3>
+    <h3 class="blue font">类选择器：样式点定义 结构class调用（会覆盖标签选择器）开发中用得最多</h3>
+    <div class="red box"></div>
+    <div class="green box"></div>
+    <div class="yellow box"></div>
+
+    <h3>id选择器：样式#定义 结构id调用 和类选择器的区别是id的只能调用一次 别人切勿使用</h3>
+    <p>id是唯一的</p>
+    <div id="pink" class="box"></div>
+
+    <h3>通配符选择器：会把所有标签都选上（初始化）不需要调用 自动给所有元素使用样式</h3>
+</body>
+</html>

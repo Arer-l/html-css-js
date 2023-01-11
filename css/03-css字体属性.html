@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .font {
+            /* 系统会一个一个往后找 前面的字体系统没有就会看下一个 */
+            /* 字体属性一般放在body标签里 */
+            font-family: "微软雅黑","宋体",Arial, Helvetica, sans-serif;
+            /* 字体大小 也可以写在body里进行统一 标题标签比较特殊 需要单独指定文字大小 */
+            font-size: 20px;
+            /* 字体粗细 400=normal 700=bold 数值不跟单位 100-900*/
+            /* 可以让加粗标签不变粗 或者其他标签加粗 */
+            font-weight: bolder;
+            /* 字体风格 正常or斜体（italic） */
+            /* 很少给文字加斜体 反而要给斜体标签（em i）改为不倾斜字体 */
+            font-style: italic;
+        }
+        /* 字体复合属性 要用简写 还要按顺序写 属性间用空格隔开*/
+        /* 必须保留font-size和font-family 否则font属性将不起作用 */
+        body {
+            /* font: font-style font-weight font-size/line-height font-family; */
+            font: normal 700 20px 'Microsoft yahei';
+        }
+    </style>
+</head>
+<body>
+    <h2>蜡笔小新</h2>
+    <p>海贼王</p>
+</body>
+</html>
