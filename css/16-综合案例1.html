@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f5f5f5;
+      }
+      .box {
+        width: 298px;
+        height: 415px;
+        margin: 100px auto;
+        background: #ffffff;
+      }
+      /* 盒子里的图片不用单独再拿一个盒子装 直接写盒子里的img的样式就行了 */
+      .box img {
+        width: 100%;
+        height: 220px;
+      }
+      .review {
+        height: 70px;
+        font-size: 14px;
+        margin: 35px 27px 20px;
+      }
+      /* 一般父子关系用padding 兄弟关系用margin */
+      .appraise {
+        font-size: 12px;
+        color: #b7b0c2;
+        margin: 0 27px 15px;
+      }
+      .info h4 {
+        margin-left: 27px;
+        margin-right: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        display: inline;
+      }
+      /* 需要给什么加链接只要把东西写好 再在前面加a标签 然后给a统一样式即可 */
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      /* .gang {
+        font-size: 12px;
+        color: #b7b0c2;
+      } */
+      .price {
+        color: #ff6700;
+        font-size: 14px;
+        margin: 0 14px;
+      }
+      em {
+        font-style: normal;
+        color: #b7b0c2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <a href="#"> <img src="images/img.jpg" /></a>
+      <p class="review">快递牛，整体不错蓝牙可以说秒连。红米给力</p>
+      <div class="appraise">来自于 117384232 的评价</div>
+      <div class="info">
+        <!-- 标签是由语义的 产品标题用h 大量文字段落用p -->
+        <h4><a href="#">Redmi AirDots真无线蓝... </a></h4>
+        <!-- <span class="gang">|</span> -->
+        <em>|</em>
+        <span class="price">99.9元</span>
+      </div>
+    </div>
+  </body>
+</html>

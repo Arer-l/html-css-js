@@ -7,10 +7,34 @@
     <title>Document</title>
     <style>
       .color {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         border: 1px red solid;
         border-top: 1px blue solid;
+      }
+
+      .bignav {
+        border-top: 3px solid #ff8500;
+        border-bottom: 1px #edeef0;
+      }
+      .nav {
+        height: 41px;
+        font-size: 12px;
+        line-height: 38px;
+        padding: 0 20px;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+      }
+      .nav:hover {
+        background-color: rgb(231, 231, 231);
+        color: #ff8500;
+      }
+      .header {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(144, 220, 255);
+        text-align: center;
       }
     </style>
   </head>
@@ -22,10 +46,79 @@
       边框：边框粗细border-width 边框样式border-style 边框颜色border-color
     </h3>
     <p>border-style：solid-实线 dashed-虚线 dotted-点线</p>
-    <p>边框简写：border: 1px solid red (没有顺序)</p>
+    <h4>边框简写：border: 1px solid red (没有顺序)</h4>
     <p>每条边可以分开写 如 border-top: 1px solid red</p>
+    <h4>表格的细线边框</h4>
+    <h4>合并相邻边框 border-collapse:collapse</h4>
 
+    <p>边框会影响盒子实际大小 所以测量的时候不测上边框</p>
     <div class="color"></div>
-    <h3></h3>
+
+    <h3>内边距：padding 盒子边框与内容之间的距离</h3>
+    <p>内边距会影响盒子实际大小-所以div的大小要减掉内边距</p>
+    <h4>
+      如果盒子本身没有指定width/height属性 则此时padding就不会撑开盒子大小
+    </h4>
+    <p>
+      没指定的宽/高 会继承父元素的宽/高 但是只要有width 就算是width:100%
+      padding都会撑开 会出现滚动条
+    </p>
+    <h4>
+      当需要子元素和父元素宽/高一样时
+      不指定子元素的宽/高（块级）padding也不会撑开盒子大小
+      此时的宽/高是父元素的宽/高
+    </h4>
+    <p>块元素宽度默认是父级元素的宽度 宽高是没继承的</p>
+
+    <h4>内边距简写 padding: xxx</h4>
+    <p>1个值：上下左右都是这个值</p>
+    <p>2个值：上下是第一个 左右是第二个</p>
+    <p>3个值：第一个是上 第二个是左右 第三个是下</p>
+    <p>4个值：第一个是上 第二个是右 第三个是下 第四个是左 （按顺时针记）</p>
+
+    <h4>
+      内边距应用：若每个容器里的字数不一样 就不用给每个容器定宽度
+      直接定相同的左右内边距即可
+    </h4>
+    <div class="bignav">
+      <a href="#" class="nav">设为首页</a>
+      <a href="#" class="nav">新浪客户端</a>
+      <a href="#" class="nav">微博</a>
+      <a href="#" class="nav">关注我</a>
+    </div>
+
+    <h3>外边距：margin 盒子与盒子之间的距离 不影响盒子实际大小</h3>
+    <h4>外边距简写 margin: xxx</h4>
+    <p>1个值：上下左右都是这个值</p>
+    <p>2个值：上下是第一个 左右是第二个</p>
+    <p>3个值：第一个是上 第二个是左右 第三个是下</p>
+    <p>4个值：第一个是上 第二个是右 第三个是下 第四个是左 （按顺时针记）</p>
+    <h4>外边距应用：让块级盒子实现水平居中</h4>
+    <p>1 盒子必须指定宽度</p>
+    <p>2 盒子左右的外边距都设置为auto --- margin:o auto</p>
+
+    <h4>
+      让行内元素或者行内块元素水平居中：给其父级元素添加text-align: center 即可
+    </h4>
+    <div class="header">
+      <span>里面的文字</span>
+      <!-- img也是这么整 -->
+    </div>
+
+    <h4>
+      嵌套块元素垂直外边距塌陷：父元素有上外边距同时子元素也有上外边距
+      此时父元素会塌陷较大的外边距值
+    </h4>
+    <p>父和子的外边距合并 形成一个外边距---父元素和子元素隔不开</p>
+    <h5>解决方案：隔开父元素和子元素</h5>
+    <p>1 可以为父元素定义上边框--颜色可以设置为transparent</p>
+    <p>2 可以为父元素定义上内边距</p>
+    <p>3 可以为父元素添加 overflow:hidden--这种不会让盒子变大</p>
+    <p>4 可以用定位--后面学</p>
+
+    <h4>清除内外边距</h4>
+    <!-- 这也是css的第一行代码 -->
+    <strong>*{ margin: 0; padding: 0; }</strong>
+    <!-- *是通配符 把所有网页元素选出来 -->
   </body>
 </html>
