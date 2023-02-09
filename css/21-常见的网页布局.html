@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .top {
+        height: 50px;
+        background-color: rgb(161, 161, 161);
+        margin-bottom: 10px;
+      }
+      .banner {
+        width: 980px;
+        height: 150px;
+        background-color: #b4fff9;
+        margin: 0 auto;
+        margin-bottom: 10px auto;
+        margin-bottom: 10px;
+      }
+      .box {
+        width: 980px;
+        height: 300px;
+        background-color: #c9ffb4;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+      .box li {
+        width: 237px;
+        height: 300px;
+        float: left;
+        background-color: #ffd196;
+        list-style: none;
+        margin-right: 10px;
+      }
+      .box .last {
+        margin-right: 0;
+      }
+      /* 只要是通栏的盒子（和浏览器的一样）不需要指定宽度 */
+      .footer {
+        height: 200px;
+        margin-top: 10px;
+        background-color: #f3ffb1;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>top banner main(left right) footer</h4>
+    <strong
+      >一个盒子中有多个盒子 如果其中一个盒子浮动了
+      那么其他兄弟也应该浮动</strong
+    >
+    <p>
+      如果第一个盒子没有浮动 是标准流 第二个盒子浮动
+      此时第二个盒子并不会压住第一个盒子 标准流还是独占一行
+    </p>
+    <p>浮动的盒子只会压住他后面的标准流 不会压前面的</p>
+    <div class="top"></div>
+    <div class="banner"></div>
+    <div class="box">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="last"></li>
+      </ul>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>

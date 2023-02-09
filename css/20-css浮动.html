@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      .box {
+        width: 1226px;
+        height: 285px;
+        background-color: #a6eaff;
+        float: left;
+      }
+      .box li {
+        width: 296px;
+        height: 285px;
+        background-color: #ffc690;
+        float: left;
+        margin-right: 14px;
+      }
+      .box .last {
+        margin-right: 0;
+      }
+      p,
+      h4,
+      h5 {
+        line-height: 30px;
+      }
+
+      /* 利用层叠性把最后一个盒子的外边距去掉 要注意权重的问题*/
+
+      .bigbox {
+        width: 1226px;
+        height: 615px;
+        background: #b1faff;
+        margin: 0 auto;
+      }
+      .left {
+        height: 615px;
+        width: 234px;
+        float: left;
+        background-color: #fff3be;
+      }
+      .right {
+        width: 992px;
+        height: 615px;
+        float: left;
+        background-color: #ffc690;
+      }
+      /* 还可以用.right>div选择器 */
+      .sub {
+        height: 300px;
+        width: 234px;
+        margin-left: 14px;
+        margin-bottom: 14px;
+        /* 高度写死了 margin不会撑开盒子 */
+        float: left;
+        background-color: rgb(169, 199, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <h4>布局方式：标准流 浮动 定位</h4>
+    <h4>1 标准流</h4>
+    <p>标签按照规定好默认方式排列</p>
+    <p>如块级元素 行内元素</p>
+
+    <h4>2 浮动</h4>
+    <p>让块级元素在同一行 但行内块之间有间隙 所以需要浮动</p>
+    <p>浮动可以改变标签默认的排列方式</p>
+    <p>多个块级元素纵向排列找标准流 多个块级元素横向排列找浮动</p>
+    <p>移动直到另一个浮动框或块的边缘</p>
+
+    <h4>浮动特性</h4>
+    <p>
+      1 浮动元素会脱离标准流（脱标）浮动的盒子不再保留原来的位置
+      会被其他盒子所占有
+    </p>
+    <p>
+      2 如果多个盒子都设置了浮动 则它们会按照属性值一行内显示并且顶端对齐排列
+      不够地方会自动换行
+    </p>
+    <p>
+      3 任何元素都可以浮动 不管原来是什么模式
+      加了浮动之后会具有和行内块元素相似的特性
+    </p>
+    <p>
+      行内元素加了浮动 就不用转换为块级就可以直接给高宽
+      不给宽则宽度会根据内容长短来决定
+    </p>
+    <p>
+      若块级盒子没有设置宽度 则默认和父级宽度一样 但是加了浮动后
+      宽度会根据内容长短来决定
+    </p>
+
+    <h5>浮动元素和标准流父级搭配使用</h5>
+    <strong
+      >布局策略：用标准流父元素排列上下位置
+      内部子元素采取浮动排列左右位置</strong
+    >
+    <p>不一定是用div布局 一个大盒子的里面的并列小盒子可以用列表做</p>
+    <!-- <ul class="box">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li class="last">4</li>
+    </ul> -->
+
+    <!-- 布局练习 -->
+    <div class="bigbox">
+      <div class="left"></div>
+      <div class="right">
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+        <div class="sub"></div>
+      </div>
+    </div>
+  </body>
+</html>
