@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   var myname = prompt("请输入名字");
+      //   console.log(myname);
+      console.log(parseFloat("120abc12"));
+    </script>
+  </head>
+  <body>
+    <h4>变量</h4>
+    <p>变量就是存放数据的容器</p>
+
+    <h4>声明变量</h4>
+    <p>var age;</p>
+    <p>声明变量后计算机会自动为变量分配内存空间</p>
+
+    <h4>变量赋值</h4>
+    <p>age=18;</p>
+    <p>
+      不用考虑数据类型 js变量的数据类型是只有在程序运行过程中
+      根据等号右边的值来确定的
+    </p>
+    <p>js是动态语言 变量的数据类型是可以变化的</p>
+
+    <h4>变量使用</h4>
+    <p>console.log(age);</p>
+
+    <h4>更新变量</h4>
+    <p>可以重新赋值</p>
+
+    <h4>声明多个变量</h4>
+    <p>var age = 18, address = '火影村', gz=2000;</p>
+    <p>用逗号分隔开就行</p>
+
+    <h4>特殊情况</h4>
+    <p>1 只声明 不赋值（输出结果是undefined）</p>
+    <p>2 使用没有声明的变量（报错）</p>
+    <p>3 不声明直接赋值（是可以的 但不提倡）</p>
+
+    <h4>命名规范</h4>
+    <p>1 由字母 数字 下划线 美元符号组成</p>
+    <p>2 严格区分大小写 app和App是两个变量</p>
+    <p>3 不能以数字开头</p>
+    <p>
+      4 不能是关键字 保留字（尽量不要把name作为变量名 在浏览器中有特殊含义）
+    </p>
+    <p>5 变量名必须有意义</p>
+    <p>6 遵守驼峰命名法：第一个单词首字母小写 后面的单词首字母大写</p>
+
+    <h4>数据类型的分类</h4>
+    <p>简单数据类型（Number String Boolean Undefined Null）</p>
+    <p>复杂数据类型（Object）</p>
+
+    <h4>数值</h4>
+    <p>八进制：0开头</p>
+    <p>十六进制：0x开头</p>
+    <p>最大值：Number.MAX_VALUE</p>
+    <p>最小值：Number.MIN_VALUE</p>
+    <p>无穷大：Infinity</p>
+    <p>无穷小：-Infinity</p>
+    <p>非数字：NaN（Not a Number）</p>
+    <p>判断是否非数字：isNaN() 是数字返回false 不是数字返回true</p>
+
+    <h4>字符串</h4>
+    <p>js推荐使用单引号</p>
+    <p>引号嵌套：外双内单 外单内双</p>
+    <p>
+      转义字符：\n（换行） \\（斜杠） \'（单引号） \"（双引号） \t（tab缩进）
+      \b（空格）
+    </p>
+    <p>转移字符要写在引号里面</p>
+    <p>获取字符串的长度：str.length</p>
+    <p>
+      字符串的拼接：用 + 拼接 只要有字符串的和别的所有类型一起拼接
+      出来的都是字符串 两个数字就是相加
+    </p>
+    <p>数值相加 字符相连</p>
+    <p>还可以拼接变量</p>
+    <p>tip：控制台紫色是数字 黑色是字符串 深蓝是布尔型</p>
+
+    <h4>布尔型</h4>
+    <p>true=1 false=0 可以和数字相加</p>
+
+    <h4>Undefined</h4>
+    <p>为定义（赋值）的数据类型</p>
+
+    <h4>NaN</h4>
+    <p>Undefined和数字相加最后是NaN（同理和布尔型相加也是NaN）</p>
+
+    <h4>Null空值</h4>
+    <p>空值加什么就是什么</p>
+
+    <h4>检测数据类型</h4>
+    <p>console.log(typeof 变量名)</p>
+
+    <h4>数据类型转换</h4>
+    <h4>转换为字符串：</h4>
+    <p>1.num.toString()</p>
+    <p>2.String(num)强制转换</p>
+    <p>3.用+拼接空字符串('')成字符串（重要</p>
+
+    <h4>转换为数字型：</h4>
+    <p>
+      1.parseInt(age)（小数的话会取整 后面带字母会去掉包括字母后的一截
+      但数字必须在前面）
+    </p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

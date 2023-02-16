@@ -5,6 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      /* after伪元素法 */
+      .clearfix:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+
+      /* 双伪元素法 */
+      .clearfix {
+        /* IE6、7 专有 */
+        *zoom: 1;
+      }
+      .clearfix:before,
+      .clearfix:after {
+        content: "";
+        display: table;
+      }
+      .clearfix:after {
+        clear: both;
+      }
+      .clearfix {
+        *zoom: 1;
+      }
+    </style>
   </head>
   <body>
     <h4>清除浮动</h4>
@@ -12,5 +39,61 @@
       >由于父级盒子很多情况下 不方便给高度 但是子盒子浮动又不占有位置
       最后父级盒子高度为0 就会影响下面的标准流盒子</strong
     >
+    <p>清除浮动本质是清除浮动元素造成的影响</p>
+    <p>clear：left（清除左浮） right（清除右浮） both（全都清除）</p>
+    <p>清除浮动的策略是闭合浮动（把浮动只闭合在父盒子里）</p>
+    <p>清除完浮动 父盒子就可以自动检测高度了</p>
+
+    <h4>清除浮动的方法</h4>
+    <p>
+      1 额外标签法（隔墙法）在最后一个浮动盒子后面写一个块级元素标签
+      然后给他加一个clear：both的样式
+    </p>
+    <p>
+      2 父级添加 overflow：hidden（一般用这个）auto scroll
+      （这种方法不会显示溢出父盒子的部分）
+    </p>
+    <p>
+      3 父级添加
+      :after伪元素法（直接cv）然后在父盒子的class里面加上classfix（class="box
+      classfix"）
+    </p>
+    <p>
+      .clearfix:after { content: ""; display: block; height: 0; clear: both;
+      visibility: hidden; } .clearfix {/* IE6、7 专有 */ *zoom: 1; }
+    </p>
+    <p>相当于用css在后面新增了一个盒子隔开了</p>
+
+    <p>
+      4
+      双伪元素：前后都给他封上（直接cv）后在父盒子的class里面加上classfix（class="box
+      classfix"）
+    </p>
+    <p>
+      .clearfix:before, .clearfix:after { content: ""; display: table }
+      .clearfix:after { clear:both; } .clearfix{ *zoom: 1; }
+    </p>
+
+    <h4>css书写顺序</h4>
+    <p>1 布局定位属性（display position float clear visibility overflow）</p>
+    <p>2 自身属性（width height margin padding border background）</p>
+    <p>
+      3 文本属性（color font text-decoration text-align vertical-align
+      white-space break-word）
+    </p>
+    <p>
+      4 其他属性（content cursor border-radius box-shadow
+      background：linear-gradient）
+    </p>
+
+    <h4>页面布局思路</h4>
+    <p>1 确定页面的版心（可视区）测量可知</p>
+    <p>2 分析行模块和行模块中的列模块</p>
+    <p>
+      3 一行中的列模块经常浮动布局 先确定每个列的大小 之后确定列的位置
+      页面布局第二准则
+    </p>
+    <p>4 先有结构 再有样式</p>
+    <p>5 先理清楚布局结构</p>
   </body>
 </html>

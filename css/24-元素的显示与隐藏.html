@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 444px;
+        height: 320px;
+        position: relative;
+      }
+      .box img {
+        width: 100%;
+        height: 100%;
+      }
+      .black {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4) url(images/arr.png) no-repeat center;
+        display: none;
+      }
+      .box:hover .black {
+        display: block;
+      }
+      /* 好家伙还能这么写 */
+    </style>
+  </head>
+  <body>
+    <h4>元素的显示与隐藏</h4>
+    <p>让一个元素在页面中隐藏或显示出来（点了关闭会不见 刷新页面会重新出现）</p>
+    <h4>display</h4>
+    <p>display: none 隐藏对象 隐藏元素后不占有位置</p>
+    <p>display: block 除了转换为块级元素之外 同时还有显示元素的意思</p>
+
+    <h4>visibility 可见性</h4>
+    <p>visibility: visible 元素可视</p>
+    <p>visibility: hidden 元素隐藏 继续占有原来的位置</p>
+
+    <h4>overflow 溢出</h4>
+    <p>overflow: visible 直接显示出来 但是会超出容器</p>
+    <p>
+      overflow: hidden 把多出来的内容隐藏
+      但内容还是完整的（为了不影响布局常用这个）
+    </p>
+    <p>overflow: scroll 有滚动条</p>
+    <p>overflow: auto 溢出的时候才出现滚动条 否则没有滚动条</p>
+    <p>但是如果有定位的盒子 慎用overflow: hidden 因为会隐藏多余的部分</p>
+
+    <div class="box">
+      <img src="images/tudou.jpg" />
+      <div class="black"></div>
+    </div>
+  </body>
+</html>
